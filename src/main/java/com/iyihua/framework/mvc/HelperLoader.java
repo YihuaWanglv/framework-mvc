@@ -1,5 +1,6 @@
 package com.iyihua.framework.mvc;
 
+import com.iyihua.framework.mvc.helper.AopHelper;
 import com.iyihua.framework.mvc.helper.BeanHelper;
 import com.iyihua.framework.mvc.helper.ClassHelper;
 import com.iyihua.framework.mvc.helper.ControllerHelper;
@@ -17,6 +18,7 @@ public final class HelperLoader {
 	Class<?>[] classList = {
 		ClassHelper.class,
 		BeanHelper.class,
+		AopHelper.class,
 		IocHelper.class,
 		ControllerHelper.class
 	};
