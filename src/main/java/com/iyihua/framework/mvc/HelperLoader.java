@@ -9,21 +9,17 @@ import com.iyihua.framework.mvc.util.ClassUtil;
 
 /**
  * 集中加载相应的helper类
+ * 
  * @author iyihua
  *
  */
 public final class HelperLoader {
 
-    public static void init() {
-	Class<?>[] classList = {
-		ClassHelper.class,
-		BeanHelper.class,
-		AopHelper.class,
-		IocHelper.class,
-		ControllerHelper.class
-	};
-	for (Class<?> cls : classList) {
-	    ClassUtil.loadClass(cls.getName());
+	public static void init() {
+		Class<?>[] classList = { ClassHelper.class, BeanHelper.class, AopHelper.class, IocHelper.class,
+				ControllerHelper.class };
+		for (Class<?> cls : classList) {
+			ClassUtil.loadClass(cls.getName());
+		}
 	}
-    }
 }

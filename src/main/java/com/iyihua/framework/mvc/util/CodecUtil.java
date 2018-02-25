@@ -15,35 +15,34 @@ import com.iyihua.framework.mvc.ConfigConstant;
  */
 public class CodecUtil {
 
-    private static final Logger logger = LoggerFactory.getLogger(CodecUtil.class);
+	private static final Logger logger = LoggerFactory.getLogger(CodecUtil.class);
 
-    /**
-     * 将 URL 编码
-     */
-    public static String encodeURL(String str) {
-        String target;
-        try {
-            target = URLEncoder.encode(str, ConfigConstant.UTF_8);
-        } catch (Exception e) {
-            logger.error("编码出错！", e);
-            throw new RuntimeException(e);
-        }
-        return target;
-    }
+	/**
+	 * 将 URL 编码
+	 */
+	public static String encodeURL(String str) {
+		String target;
+		try {
+			target = URLEncoder.encode(str, ConfigConstant.UTF_8);
+		} catch (Exception e) {
+			logger.error("编码出错！", e);
+			throw new RuntimeException(e);
+		}
+		return target;
+	}
 
-    /**
-     * 将 URL 解码
-     */
-    public static String decodeURL(String str) {
-        String target;
-        try {
-            target = URLDecoder.decode(str, ConfigConstant.UTF_8);
-        } catch (Exception e) {
-            logger.error("解码出错！", e);
-            throw new RuntimeException(e);
-        }
-        return target;
-    }
+	/**
+	 * 将 URL 解码
+	 */
+	public static String decodeURL(String str) {
+		String target;
+		try {
+			target = URLDecoder.decode(str, ConfigConstant.UTF_8);
+		} catch (Exception e) {
+			logger.error("解码出错！", e);
+			throw new RuntimeException(e);
+		}
+		return target;
+	}
 
-    
 }
